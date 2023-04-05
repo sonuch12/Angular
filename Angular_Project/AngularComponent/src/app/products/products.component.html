@@ -1,0 +1,19 @@
+<div *ngFor="let item of [1, 4, 8, 9]">
+  <p>Number of items is {{ item }}</p>
+</div>
+<div
+  *ngFor="let p of pro; let i = index"
+  [ngStyle]="{ backgroundColor: p.details === 'availabe' ? 'Green' : 'Red' }"
+>
+  <p>{{ i }}</p>
+  <span>Product id is {{ p.id }}</span>
+  <br />
+  <span>Product name is {{ p.name }}</span>
+  <br />
+  <span>Product PhoneNumber is is {{ p.phNumber }}</span>
+  <br />
+  <span [ngStyle]="{ color: p.details === 'availabe' ? 'Green' : 'Red' }"
+    >Product is {{ p.details }}</span
+  >
+  <br />
+</div>
