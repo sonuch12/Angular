@@ -7,10 +7,19 @@ import { NavComponent } from './nav/nav.component';
 import { HeaderComponent } from './header/header.component';
 import { NotificationComponent } from './notification/notification.component';
 import { FormComponent } from './form/form.component';
-
+import { SearchComponent } from './search/search.component';
+import { FormsModule } from '@angular/forms';
 @NgModule({
-  declarations: [AppComponent, ContainerComponent, NavComponent, HeaderComponent, NotificationComponent, FormComponent],
-  imports: [BrowserModule],
+  declarations: [
+    AppComponent,
+    ContainerComponent,
+    NavComponent,
+    HeaderComponent,
+    NotificationComponent,
+    FormComponent,
+    SearchComponent,
+  ],
+  imports: [BrowserModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

@@ -11,4 +11,5 @@ export class HeaderComponent {
     return 'Angular Class';
   }
   source: string = '/assets/sonu.jpg';
+  end: string = '/assets/s1.jpg';
 }
