@@ -16,4 +16,10 @@
     >Product is {{ p.details }}</span
   >
   <br />
+  <button class="btn btn-success" *ngIf="p.details === 'availabe'; else notify">
+    Buy
+  </button>
+  <ng-template #notify>
+    <button class="btn btn-warning">Notify</button></ng-template
+  >
 </div>
