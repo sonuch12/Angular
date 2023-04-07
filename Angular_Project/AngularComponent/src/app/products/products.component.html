@@ -1,9 +1,17 @@
+<!-- We will use a component find to search the things -->
+
 <div *ngFor="let item of [1, 4, 8, 9]">
   <p>Number of items is {{ item }}</p>
 </div>
+<div><app-find></app-find></div>
+<app-filter
+  [all]="getAll()"
+  [available]="getAvailable()"
+  [notavailable]="getNotAvailable()"
+></app-filter>
 <div
   *ngFor="let p of pro; let i = index"
-  [ngStyle]="{ backgroundColor: p.details === 'availabe' ? 'Green' : 'Red' }"
+  [ngStyle]="{ backgroundColor: p.details === 'availabe' ? 'Grey' : 'White' }"
 >
   <p>{{ i }}</p>
   <span>Product id is {{ p.id }}</span>
