@@ -9,4 +9,5 @@ export class FilterComponent {
   @Input() all: number = 0;
   @Input() available: number = 0;
   @Input() notavailable: number = 0;
+  selectedButton:string='All'
 }

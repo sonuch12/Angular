@@ -1,9 +1,17 @@
 <span>Filter</span> &nbsp;&nbsp;
-<input type="radio" name="filter" value="available" />
+<input type="radio" name="filter" value="All" [(ngModel)]="selectedButton" />
 All coursess({{ all }})&nbsp; &nbsp;
-<input type="radio" name="filter" value="available" /> Available({{
-  available
-}})&nbsp; &nbsp;
-<input type="radio" name="filter" value="notavailable" /> NotAvailable({{
-  notavailable
-}})<br />
+<input
+  type="radio"
+  name="filter"
+  value="Available"
+  [(ngModel)]="selectedButton"
+/>
+Available({{ available }})&nbsp; &nbsp;
+<input
+  type="radio"
+  name="filter"
+  value="Notavailable"
+  [(ngModel)]="selectedButton"
+/>
+NotAvailable({{ notavailable }})<br />
