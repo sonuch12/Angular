@@ -1,0 +1,11 @@
+<div *ngFor="let customer of customers">
+  <span> Id of customer is {{ customer.custId }}</span> &nbsp;&nbsp;
+  <span> Name of customer is {{ customer.name }}</span> &nbsp;&nbsp;
+  <span> Address of customer is {{ customer.address }}</span
+  >&nbsp;&nbsp; <span> City of customer is {{ customer.city }}</span
+  >&nbsp;&nbsp; <span> Country of customer is {{ customer.country }}</span
+  >&nbsp;&nbsp;
+  <button class="btn btn-success" (click)="selectedCustomer = customer">
+    Selected
+  </button>
+</div>

@@ -1,0 +1,5 @@
+<div>
+  <input type="text" #myVariable (keyup)="(0)" />
+  <button (click)="sayHello(myVariable)">Hello</button>
+  <p>You typed"{{ myVariable.value }}"</p>
+</div>
