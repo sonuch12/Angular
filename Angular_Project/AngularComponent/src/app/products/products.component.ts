@@ -20,9 +20,14 @@ export class ProductsComponent {
     return this.pro.length;
   }
   getAvailable() {
-    return this.pro.filter((x) => x.details == 'availabe').length;
+    return this.pro.filter((p) => p.details == 'availabe').length;
   }
   getNotAvailable() {
-    return this.pro.filter((y) => y.details == 'notavailabe').length;
+    return this.pro.filter((p) => p.details == 'notavailabe').length;
+  }
+  productCountRadioButton: string = 'All';
+  onFilterRadioButtonChange(dat: string) {
+    this.productCountRadioButton = dat;
+    console.log(this.productCountRadioButton);
   }
 }

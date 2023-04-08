@@ -8,26 +8,35 @@
   [all]="getAll()"
   [available]="getAvailable()"
   [notavailable]="getNotAvailable()"
+  (filterradiobuttonSelctionChange)="onFilterRadioButtonChange($event)"
 ></app-filter>
-<div
-  *ngFor="let p of pro; let i = index"
-  [ngStyle]="{ backgroundColor: p.details === 'availabe' ? 'Grey' : 'White' }"
->
-  <p>{{ i }}</p>
-  <span>Product id is {{ p.id }}</span>
-  <br />
-  <span>Product name is {{ p.name }}</span>
-  <br />
-  <span>Product PhoneNumber is is {{ p.phNumber }}</span>
-  <br />
-  <span [ngStyle]="{ color: p.details === 'availabe' ? 'Green' : 'Red' }"
-    >Product is {{ p.details }}</span
+<ng-container *ngFor="let p of pro; let i = index">
+  <div
+    *ngIf="
+      productCountRadioButton === 'All' || productCountRadioButton === p.details
+    "
   >
-  <br />
-  <button class="btn btn-success" *ngIf="p.details === 'availabe'; else notify">
-    Buy
-  </button>
-  <ng-template #notify>
-    <button class="btn btn-warning">Notify</button></ng-template
-  >
-</div>
+    <div>
+      <p>{{ i }}</p>
+      <span>Product id is {{ p.id }}</span>
+      <br />
+      <span>Product name is {{ p.name }}</span>
+      <br />
+      <span>Product PhoneNumber is is {{ p.phNumber }}</span>
+      <br />
+      <span [ngStyle]="{ color: p.details === 'availabe' ? 'Green' : 'Red' }"
+        >Product is {{ p.details }}</span
+      >
+      <br />
+      <button
+        class="btn btn-success"
+        *ngIf="p.details === 'availabe'; else notify"
+      >
+        Buy
+      </button>
+      <ng-template #notify>
+        <button class="btn btn-warning">Notify</button></ng-template
+      >
+    </div>
+  </div>
+</ng-container>
