@@ -1,7 +1,29 @@
 <h1>Welcome to the ChildContent</h1>
-<app-demo>
-  <p #access appSetbackground>We will see the child component</p> </app-demo
-><br />
+<!-- content child -->
+<app-demo> <p #access>We will see the child component</p> </app-demo><br />
 <br />
+<!-- Custom Directive -->
 <div appSetbackground>Use of Custom Directives</div>
+<br /><br />
 <div appHighlight>For using another</div>
+<br /><br />
+<!-- HostListnet -->
+<div class="container" appHostlistner>
+  <div class="row">
+    <div class="col-6 offset-4">
+      <span style="height: 120px; width: 120px">We will HostListnet</span>
+      <span style="height: 120px; width: 120px">We will HostListnet</span>
+    </div>
+  </div>
+</div>
+<br />
+<br />
+<!-- HostBinding -->
+<div appHostbinding>
+  <span>
+    <h1>
+      We will see the use of HostBinding it binds the host html property to
+      directive variable
+    </h1>
+  </span>
+</div>
